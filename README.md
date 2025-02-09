@@ -18,7 +18,7 @@ This project exposes a gRPC service as an HTTP API to fetch weather data using t
 ---
 
 ## Setup
-## Install Dependencies
+**Install Dependencies**
 Install the required tools and plugins:
 ```bash
 # Install protoc (Protocol Buffers Compiler)
@@ -28,23 +28,26 @@ Install the required tools and plugins:
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@latest
-
+```
 ---
-## Clone the project in your local.
+
+## Test the Project by following:
+
+1. Clone the project in your local.
    git clone https://github.com/karthikchekuri1208/grpc-weather-service.git 
 
 
-## Set your OpenWeather API key as the environment variable:
+2. Set your OpenWeather API key as the environment variable:
    For powershell : $env:OPENWEATHER_API_KEY = "your_api_key"
    FOr bash       : export OPENWEATHER_API_KEY="your_api_key"
 
 
-## Run the grpc server and http gateway:
+3.  Run the grpc server and http gateway:
    go run main.go
 
-## One should see a message of grpc server and HTTP gateway running in port 8080.
+4. One should see a message of grpc server and HTTP gateway running in port 8080.
 
-## One can test the API call via browser or curl from the command prompt.
+5. One can test the API call via browser or curl from the command prompt.
    Example: http://localhost:8080/v1/weather?lat=44&long=-25
    Response : { "condition": "Clouds", "temperature": "Moderate"}
    
