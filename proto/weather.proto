@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package weather;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/karthikchekuri1208/grpc-weather-service/proto"; 
+ 
+/* protoc -I. `
+ -IC:\go-work\src\github.com\googleapis `
+ --go_out=gen `
+ --go-grpc_out=gen `
+ --grpc-gateway_out=gen `
+ proto/weather.proto */
+
+service WeatherService{
+    rpc GetWeather(WeatherRequest) returns (WeatherResponse){
+        option (google.api.http) = {
+            get: "/v1/weather"
+        };
+    }
+
+}
+
+message WeatherRequest {
+    float lat = 1;
+    float long = 2;
+}
+
+message WeatherResponse {
+    string condition = 1;
+    string temperature = 2;
+}
