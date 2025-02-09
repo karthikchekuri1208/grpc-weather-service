@@ -34,20 +34,20 @@ go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@lat
 ## Test the Project by following:
 
 1. Clone the project in your local.
-   git clone https://github.com/karthikchekuri1208/grpc-weather-service.git 
+   - git clone https://github.com/karthikchekuri1208/grpc-weather-service.git 
 
 
 2. Set your OpenWeather API key as the environment variable:
-   For powershell : $env:OPENWEATHER_API_KEY = "your_api_key"
-   FOr bash       : export OPENWEATHER_API_KEY="your_api_key"
+   - For powershell : $env:OPENWEATHER_API_KEY = "your_api_key"
+   - For bash       : export OPENWEATHER_API_KEY="your_api_key"
 
 
 3.  Run the grpc server and http gateway:
-   go run main.go
+    - go run main.go
 
 4. One should see a message of grpc server and HTTP gateway running in port 8080.
 
 5. One can test the API call via browser or curl from the command prompt.
-   Example: http://localhost:8080/v1/weather?lat=44&long=-25
-   Response : { "condition": "Clouds", "temperature": "Moderate"}
+   - Example: http://localhost:8080/v1/weather?lat=44&long=-25
+   - Response : { "condition": "Clouds", "temperature": "Moderate"}
    
